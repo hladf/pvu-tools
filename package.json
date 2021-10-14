@@ -1,0 +1,16 @@
+{
+  "name": "pvu-tools",
+  "version": "0.3.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --experimental-json-modules src/index.js",
+    "report": "node --experimental-json-modules src/index.js --report"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.0.0"
+  },
+  "type": "module"
+}

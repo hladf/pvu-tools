@@ -1,0 +1,904 @@
+[
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1022812593',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 5750,
+    hours: 480,
+    profit: 11.979166666666666,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052811441',
+    pricePVU: 14.97,
+    precoEmReais: 269.46000000000004,
+    le: 5640,
+    hours: 480,
+    profit: 11.75,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052613110',
+    pricePVU: 14.99,
+    precoEmReais: 269.82,
+    le: 3810,
+    hours: 336,
+    profit: 11.339285714285714,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052612617',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 3760,
+    hours: 336,
+    profit: 11.19047619047619,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052612517',
+    pricePVU: 14.99,
+    precoEmReais: 269.82,
+    le: 3750,
+    hours: 336,
+    profit: 11.160714285714286,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052512327',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 3730,
+    hours: 336,
+    profit: 11.101190476190476,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042512198',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 3710,
+    hours: 336,
+    profit: 11.041666666666666,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052510940',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 3590,
+    hours: 336,
+    profit: 10.68452380952381,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1012610763',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 3570,
+    hours: 336,
+    profit: 10.625,
+    plantType: 'metal'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1011415079',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1700,
+    hours: 192,
+    profit: 8.854166666666666,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1003514987',
+    pricePVU: 14.859,
+    precoEmReais: 267.462,
+    le: 1890,
+    hours: 216,
+    profit: 8.75,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1003514628',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1860,
+    hours: 216,
+    profit: 8.61111111111111,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053514535',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1850,
+    hours: 216,
+    profit: 8.564814814814815,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053114434',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1640,
+    hours: 192,
+    profit: 8.541666666666666,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052327121',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1421,
+    hours: 168,
+    profit: 8.458333333333334,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053114149',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1610,
+    hours: 192,
+    profit: 8.385416666666666,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052315910',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1359,
+    hours: 168,
+    profit: 8.089285714285714,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042215770',
+    pricePVU: 13.8,
+    precoEmReais: 248.4,
+    le: 1357,
+    hours: 168,
+    profit: 8.077380952380953,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1012315090',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1350,
+    hours: 168,
+    profit: 8.035714285714286,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052314831',
+    pricePVU: 14.99,
+    precoEmReais: 269.82,
+    le: 1348,
+    hours: 168,
+    profit: 8.023809523809524,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042414775',
+    pricePVU: 14.04,
+    precoEmReais: 252.71999999999997,
+    le: 1347,
+    hours: 168,
+    profit: 8.017857142857142,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1032414792',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1347,
+    hours: 168,
+    profit: 8.017857142857142,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052314540',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1345,
+    hours: 168,
+    profit: 8.005952380952381,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042314079',
+    pricePVU: 14.65,
+    precoEmReais: 263.7,
+    le: 1340,
+    hours: 168,
+    profit: 7.976190476190476,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052413943',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1339,
+    hours: 168,
+    profit: 7.970238095238095,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1002413586',
+    pricePVU: 14.9,
+    precoEmReais: 268.2,
+    le: 1335,
+    hours: 168,
+    profit: 7.946428571428571,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1002412961',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1329,
+    hours: 168,
+    profit: 7.910714285714286,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052412720',
+    pricePVU: 14.4,
+    precoEmReais: 259.2,
+    le: 1327,
+    hours: 168,
+    profit: 7.898809523809524,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052212738',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1327,
+    hours: 168,
+    profit: 7.898809523809524,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1021314536',
+    pricePVU: 14.8,
+    precoEmReais: 266.40000000000003,
+    le: 945,
+    hours: 120,
+    profit: 7.875,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052412228',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1322,
+    hours: 168,
+    profit: 7.869047619047619,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1043113171',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1510,
+    hours: 192,
+    profit: 7.864583333333333,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052412039',
+    pricePVU: 14.9,
+    precoEmReais: 268.2,
+    le: 1320,
+    hours: 168,
+    profit: 7.857142857142857,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1031214187',
+    pricePVU: 14.6,
+    precoEmReais: 262.8,
+    le: 941,
+    hours: 120,
+    profit: 7.841666666666667,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1001314002',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 940,
+    hours: 120,
+    profit: 7.833333333333333,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1002411185',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1311,
+    hours: 168,
+    profit: 7.803571428571429,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042410961',
+    pricePVU: 13,
+    precoEmReais: 234,
+    le: 1309,
+    hours: 168,
+    profit: 7.791666666666667,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052410818',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1308,
+    hours: 168,
+    profit: 7.785714285714286,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052410534',
+    pricePVU: 13.97,
+    precoEmReais: 251.46,
+    le: 1305,
+    hours: 168,
+    profit: 7.767857142857143,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041313288',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 932,
+    hours: 120,
+    profit: 7.766666666666667,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042410428',
+    pricePVU: 13.88,
+    precoEmReais: 249.84,
+    le: 1304,
+    hours: 168,
+    profit: 7.761904761904762,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053112947',
+    pricePVU: 14.95,
+    precoEmReais: 269.09999999999997,
+    le: 1490,
+    hours: 192,
+    profit: 7.760416666666667,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1022310278',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1302,
+    hours: 168,
+    profit: 7.75,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051312741',
+    pricePVU: 14.89,
+    precoEmReais: 268.02,
+    le: 927,
+    hours: 120,
+    profit: 7.725,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051212611',
+    pricePVU: 13.87,
+    precoEmReais: 249.66,
+    le: 926,
+    hours: 120,
+    profit: 7.716666666666667,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051312536',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 925,
+    hours: 120,
+    profit: 7.708333333333333,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1031312549',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 925,
+    hours: 120,
+    profit: 7.708333333333333,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053112837',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1480,
+    hours: 192,
+    profit: 7.708333333333333,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051212145',
+    pricePVU: 14.1,
+    precoEmReais: 253.79999999999998,
+    le: 921,
+    hours: 120,
+    profit: 7.675,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1011412729',
+    pricePVU: 13.25,
+    precoEmReais: 238.5,
+    le: 1470,
+    hours: 192,
+    profit: 7.65625,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1021111035',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 910,
+    hours: 120,
+    profit: 7.583333333333333,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1031310765',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 907,
+    hours: 120,
+    profit: 7.558333333333334,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1031210326',
+    pricePVU: 14.59,
+    precoEmReais: 262.62,
+    le: 903,
+    hours: 120,
+    profit: 7.525,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1011210327',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 903,
+    hours: 120,
+    profit: 7.525,
+    plantType: 'parasite'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053311931',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1590,
+    hours: 216,
+    profit: 7.361111111111111,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1033112163',
+    pricePVU: 14.8,
+    precoEmReais: 266.40000000000003,
+    le: 1410,
+    hours: 192,
+    profit: 7.34375,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053311227',
+    pricePVU: 13.99,
+    precoEmReais: 251.82,
+    le: 1520,
+    hours: 216,
+    profit: 7.037037037037037,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1043311045',
+    pricePVU: 13.5,
+    precoEmReais: 243,
+    le: 1500,
+    hours: 216,
+    profit: 6.944444444444445,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1021411259',
+    pricePVU: 13,
+    precoEmReais: 234,
+    le: 1320,
+    hours: 192,
+    profit: 6.875,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1021411187',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1310,
+    hours: 192,
+    profit: 6.822916666666667,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051411146',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1310,
+    hours: 192,
+    profit: 6.822916666666667,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1033110927',
+    pricePVU: 14.1,
+    precoEmReais: 253.79999999999998,
+    le: 1290,
+    hours: 192,
+    profit: 6.71875,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1053310535',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1450,
+    hours: 216,
+    profit: 6.712962962962963,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1013110710',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1270,
+    hours: 192,
+    profit: 6.614583333333333,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041410571',
+    pricePVU: 13.5,
+    precoEmReais: 243,
+    le: 1250,
+    hours: 192,
+    profit: 6.510416666666667,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051410447',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1240,
+    hours: 192,
+    profit: 6.458333333333333,
+    plantType: 'dark'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051828640',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1336,
+    hours: 240,
+    profit: 5.566666666666666,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1001928663',
+    pricePVU: 14,
+    precoEmReais: 252,
+    le: 1336,
+    hours: 240,
+    profit: 5.566666666666666,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051928633',
+    pricePVU: 12.9,
+    precoEmReais: 232.20000000000002,
+    le: 1336,
+    hours: 240,
+    profit: 5.566666666666666,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051828517',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1335,
+    hours: 240,
+    profit: 5.5625,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1002128449',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1734,
+    hours: 312,
+    profit: 5.5576923076923075,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042128349',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1733,
+    hours: 312,
+    profit: 5.55448717948718,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041828379',
+    pricePVU: 13.49,
+    precoEmReais: 242.82,
+    le: 1333,
+    hours: 240,
+    profit: 5.554166666666666,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051928237',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1332,
+    hours: 240,
+    profit: 5.55,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1012028154',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1731,
+    hours: 312,
+    profit: 5.548076923076923,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051828135',
+    pricePVU: 13.3,
+    precoEmReais: 239.4,
+    le: 1331,
+    hours: 240,
+    profit: 5.545833333333333,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051828046',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1330,
+    hours: 240,
+    profit: 5.541666666666667,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1011827965',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1329,
+    hours: 240,
+    profit: 5.5375,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041927944',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1329,
+    hours: 240,
+    profit: 5.5375,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051827832',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1328,
+    hours: 240,
+    profit: 5.533333333333333,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041927789',
+    pricePVU: 14.5,
+    precoEmReais: 261,
+    le: 1327,
+    hours: 240,
+    profit: 5.529166666666667,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1041927575',
+    pricePVU: 13.4,
+    precoEmReais: 241.20000000000002,
+    le: 1325,
+    hours: 240,
+    profit: 5.520833333333333,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1021927581',
+    pricePVU: 13.5,
+    precoEmReais: 243,
+    le: 1325,
+    hours: 240,
+    profit: 5.520833333333333,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1002127098',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1720,
+    hours: 312,
+    profit: 5.512820512820513,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/103182722908',
+    pricePVU: 13.49,
+    precoEmReais: 242.82,
+    le: 1322,
+    hours: 240,
+    profit: 5.508333333333334,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042026897',
+    pricePVU: 14.95,
+    precoEmReais: 269.09999999999997,
+    le: 1718,
+    hours: 312,
+    profit: 5.506410256410256,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052126249',
+    pricePVU: 13.44,
+    precoEmReais: 241.92,
+    le: 1712,
+    hours: 312,
+    profit: 5.487179487179487,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052126132',
+    pricePVU: 12.969999,
+    precoEmReais: 233.459982,
+    le: 1711,
+    hours: 312,
+    profit: 5.483974358974359,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051926539',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1315,
+    hours: 240,
+    profit: 5.479166666666667,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1031826528',
+    pricePVU: 13.5,
+    precoEmReais: 243,
+    le: 1315,
+    hours: 240,
+    profit: 5.479166666666667,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051926333',
+    pricePVU: 12.75,
+    precoEmReais: 229.5,
+    le: 1313,
+    hours: 240,
+    profit: 5.470833333333333,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1051926138',
+    pricePVU: 13.9,
+    precoEmReais: 250.20000000000002,
+    le: 1311,
+    hours: 240,
+    profit: 5.4625,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052115839',
+    pricePVU: 12.9,
+    precoEmReais: 232.20000000000002,
+    le: 1658,
+    hours: 312,
+    profit: 5.314102564102564,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1042115760',
+    pricePVU: 12,
+    precoEmReais: 216,
+    le: 1657,
+    hours: 312,
+    profit: 5.310897435897436,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052115640',
+    pricePVU: 12.9,
+    precoEmReais: 232.20000000000002,
+    le: 1656,
+    hours: 312,
+    profit: 5.3076923076923075,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052115636',
+    pricePVU: 12.32,
+    precoEmReais: 221.76,
+    le: 1656,
+    hours: 312,
+    profit: 5.3076923076923075,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052115446',
+    pricePVU: 12.11111,
+    precoEmReais: 217.99998,
+    le: 1654,
+    hours: 312,
+    profit: 5.301282051282051,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052015437',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1654,
+    hours: 312,
+    profit: 5.301282051282051,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052114143',
+    pricePVU: 15,
+    precoEmReais: 270,
+    le: 1641,
+    hours: 312,
+    profit: 5.259615384615385,
+    plantType: 'light'
+  },
+  {
+    url: 'https://marketplace.plantvsundead.com/farm#/plant/1052113838',
+    pricePVU: 13.4,
+    precoEmReais: 241.20000000000002,
+    le: 1638,
+    hours: 312,
+    profit: 5.25,
+    plantType: 'light'
+  },
+  ... 53 more items
+]
+{ upTo15Pvu: 153, results: 153 }
