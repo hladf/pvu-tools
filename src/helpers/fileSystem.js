@@ -18,6 +18,13 @@ export function appendDataToFile(data, path) {
   fs.appendFileSync(path, data);
 }
 
+export function readFileData(path) {
+  if (!path) {
+    return;
+  }
+  return fs.readFileSync(path).toString();
+}
+
 export function registerLog({ message, title }) {
   const timestamp = new Date().toLocaleString().substring(0, 16);
   const date = timestamp.substring(0, 10).replace(/\//g, '-');

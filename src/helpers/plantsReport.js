@@ -1,5 +1,5 @@
 // const datajson = require('./data.json');
-import datajson from '../data.json';
+// import datajson from '../data.json';
 import {
   MIN_PRICE,
   MAX_PRICE,
@@ -9,6 +9,7 @@ import {
   MAX_PLANT_HOURS,
 } from '../config/constants.js';
 import { fetchLatestPlantsDataOnMarket } from '../services/index.js';
+import { readFileData } from './fileSystem.js';
 import { writeDataToFile } from './index.js';
 
 export function generatePlantsProfitReport(data) {
@@ -64,6 +65,11 @@ export async function runPlantsProfitReport() {
       PVU_PRICE,
       MAX_PLANT_HOURS,
     });
+    let datajson = {};
+    try {
+      datajson = JSON.parse(readFileData('./src/data.json'));
+    } catch (error) {}
+
     const lastUpdateDate = datajson.date ? new Date(datajson.date) : undefined;
 
     const cacheTimeLimit = CACHE_EXPIRES_IN * 60 * 1000;

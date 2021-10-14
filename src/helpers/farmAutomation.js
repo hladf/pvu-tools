@@ -1,6 +1,6 @@
 import { INTERVAL_BETWEEN_ACTIONS, TOOLS_DICT } from '../config/constants.js';
 import { applyTool, getFarmData } from '../services/index.js';
-import { registerLog } from './generateLogs.js';
+import { registerLog } from './fileSystem.js';
 
 export async function waitSeconds(seconds) {
   await new Promise((resolve) => setTimeout(() => resolve(), seconds * 1000));
