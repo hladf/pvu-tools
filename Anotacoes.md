@@ -1,26 +1,82 @@
 # Anotacoes:
 
-## CURL de POST de espantalho pra tirar corvo:
+- activeTools fica com array vazio antes de botar vaso de planta
+- toolId 1 = vaso pequeno
 
+## fetch para HARVEST:
+
+````js
+fetch("https://backend-farm.plantvsundead.com/farms/61664b06deb3c1001206a35b/harvest", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0MzUwMjQ5MjEwLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDM1MDI0OX0.bBCvNoxHkRN0Bskht0g8HjNHkqqK62e8lIRe9YD6wmM",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://marketplace.plantvsundead.com/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{}",
+  "method": "POST",
+  "mode": "cors"
+})
 ```
-curl 'https://backend-farm.plantvsundead.com/farms/apply-tool' \
-  -H 'authority: backend-farm.plantvsundead.com' \
-  -H 'sec-ch-ua: "Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"' \
-  -H 'dnt: 1' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'authorization: Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjMzOTUzODQ2NjMyLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzMzk1Mzg0Nn0.pZ_7RenboTAAvlysFSxtYKWJ-UWKpmGc0R5o96UjzbM' \
-  -H 'content-type: application/json;charset=UTF-8' \
-  -H 'accept: application/json, text/plain, */*' \
-  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36' \
-  -H 'sec-ch-ua-platform: "Windows"' \
-  -H 'origin: https://marketplace.plantvsundead.com' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://marketplace.plantvsundead.com/' \
-  -H 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
-  --data-raw '{"farmId":"61627a2b60b72d00227c5ba7","toolId":4,"token":{"challenge":"default","seccode":"default","validate":"default"}}' \
-  --compressed
+
+## fetch de plantar Sapling:
+```js
+fetch("https://backend-farm.plantvsundead.com/farms", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0Mjk1NDE1ODIzLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDI5NTQxNX0.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://marketplace.plantvsundead.com/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{\"landId\":0,\"sunflowerId\":1}",
+  "method": "POST",
+  "mode": "cors"
+});
+````
+
+## fetch de remover planta ja colhida:
+
+```js
+fetch(
+  'https://backend-farm.plantvsundead.com/farms/6164dc148af8d80020e046de/deactivate',
+  {
+    headers: {
+      accept: 'application/json, text/plain, */*',
+      'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+      authorization:
+        'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0Mjk1NDE1ODIzLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDI5NTQxNX0.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk',
+      'content-type': 'application/json;charset=UTF-8',
+      'sec-ch-ua':
+        '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+      'sec-ch-ua-mobile': '?0',
+      'sec-ch-ua-platform': '"Windows"',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'same-site',
+    },
+    referrer: 'https://marketplace.plantvsundead.com/',
+    referrerPolicy: 'strict-origin-when-cross-origin',
+    body: '{}',
+    method: 'POST',
+    mode: 'cors',
+  }
+);
 ```
 
 ## Exemplo de `data` com ultima planta com corvo:
@@ -537,100 +593,7 @@ curl 'https://backend-farm.plantvsundead.com/farms/apply-tool' \
 
 ```json
 [
-  {
-    "_id": "615f2c1f8e5ce9002d1c6247",
-    "plant": {
-      "farmConfig": {
-        "le": 1332,
-        "hours": 168
-      },
-      "stats": {
-        "type": "parasite",
-        "hp": 0,
-        "defPhysics": 0,
-        "defMagic": 0,
-        "damagePhysics": 132,
-        "damageMagic": 0,
-        "damagePure": 0,
-        "damageHpLoss": 0,
-        "damageHpRemove": 0
-      },
-      "type": 1,
-      "iconUrl": "https://pvuresources.s3.ap-southeast-2.amazonaws.com/icon/plant/23_1.png",
-      "rarity": 0,
-      "synergy": {
-        "requirement": 10,
-        "description": "All plants/trees (except parasite) productivity is increased by 20%."
-      }
-    },
-    "land": {
-      "elements": {
-        "fire": 0,
-        "water": 0,
-        "ice": 0,
-        "wind": 0,
-        "electro": 0,
-        "parasite": 0,
-        "light": 0,
-        "dark": 0,
-        "metal": 0
-      },
-      "capacity": {
-        "plant": 5,
-        "motherTree": 1
-      },
-      "landId": 0,
-      "x": 0,
-      "y": 0,
-      "totalOfElements": 0,
-      "rarity": 0
-    },
-    "isTempPlant": false,
-    "stage": "farming",
-    "ownerId": "0xb55378466f92e702eb350a7eb2d77ff9ba1909f3",
-    "landId": 0,
-    "plantId": 1012313216,
-    "plantUnitId": 10123132,
-    "plantType": 1,
-    "plantElement": "parasite",
-    "activeTools": [
-      {
-        "count": 1,
-        "_id": "615f2c1f8e5ce9002d1c6249",
-        "id": 2,
-        "type": "POT",
-        "duration": 30,
-        "endTime": "2021-11-06T17:20:02.709Z",
-        "startTime": "2021-10-07T17:20:02.709Z"
-      },
-      {
-        "count": 2,
-        "_id": "615f2c1f8e5ce9002d1c624a",
-        "id": 3,
-        "type": "WATER",
-        "duration": 0,
-        "endTime": "2021-10-14T23:59:59.999Z",
-        "startTime": "2021-10-13T23:59:59.999Z"
-      }
-    ],
-    "createdAt": "2021-10-07T17:19:27.275Z",
-    "updatedAt": "2021-10-14T08:19:37.313Z",
-    "__v": 0,
-    "harvestTime": "2021-10-15T00:12:12.612Z",
-    "rate": {
-      "le": 1332,
-      "hours": 168
-    },
-    "startTime": "2021-10-07T17:20:02.719Z",
-    "hasSynergy": false,
-    "needWater": false,
-    "hasSeed": false,
-    "pausedTime": null,
-    "inGreenhouse": false,
-    "count": 46,
-    "totalHarvest": 0,
-    "totalExtraHarvest": 0
-  },
+  { ... },
   {
     "_id": "61602733c0a29a002979aa8d",
     "plant": {
