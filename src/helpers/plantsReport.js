@@ -7,6 +7,8 @@ import {
   PVU_PRICE,
   CACHE_EXPIRES_IN,
   MAX_PLANT_HOURS,
+  REAIS_PRICE,
+  CONVERSION_LE_PVU,
 } from '../config/constants.js';
 import { fetchLatestPlantsDataOnMarket } from '../services/index.js';
 import { readFileData } from './fileSystem.js';
@@ -32,11 +34,16 @@ export function generatePlantsProfitReport(data) {
     }) => ({
       url: 'https://marketplace.plantvsundead.com/farm#/plant/' + id,
       pricePVU: startingPrice,
-      precoEmReais: startingPrice * PVU_PRICE,
+      precoEmReais: startingPrice * PVU_PRICE * REAIS_PRICE,
       le,
       hours,
       daysToHarvest: hours / 24,
       profit: le / hours,
+      LePorDia: (le / hours) * 24,
+      DolaresPorDia: (((le / hours) * 24) / CONVERSION_LE_PVU) * PVU_PRICE,
+      ReaisPorDia:
+        (((le / hours) * 24) / CONVERSION_LE_PVU) * PVU_PRICE * REAIS_PRICE,
+      payback: 0,
       plantType: type,
     })
   );
