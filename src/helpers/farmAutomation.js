@@ -12,15 +12,13 @@ export async function waitSeconds(seconds) {
 
 function generateActionsList(farmData = []) {
   return farmData.reduce((accumulator, current) => {
-    const canBeHarvested =
-      new Date(current.harvestTime).getTime() <= new Date().getTime() &&
-      current.totalHarvest > 0 &&
-      current.stage === 'cancelled';
+    const canBeHarvested = current.totalHarvest > 0;
 
     if (canBeHarvested) {
       // Opção de harvest
       console.log('Hora da colheita!');
       accumulator.push({ id: current._id, action: ACTIONS_DICT.HarvestPlant });
+
       if (current.isTempPlant) {
         // remove plant e se é temporaria, planta novamente
         const actionPlantAgain =
@@ -33,11 +31,16 @@ function generateActionsList(farmData = []) {
           id: current._id,
           action: actionPlantAgain,
         });
+        accumulator.push({
+          id: current._id,
+          action: ACTIONS_DICT.ApplySmallPot,
+        });
+        accumulator.push({ id: current._id, action: ACTIONS_DICT.ApplyWater });
       }
     }
 
     if (current.needWater) {
-      accumulator.push({ id: current._id, action: ACTIONS_DICT.ApplyWater });
+      // usar agua 1x ja conta pra 2 aguas
       accumulator.push({ id: current._id, action: ACTIONS_DICT.ApplyWater });
     }
     if (current.hasCrow) {
