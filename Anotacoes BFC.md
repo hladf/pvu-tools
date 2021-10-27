@@ -80,6 +80,30 @@ fetch('https://blockfarm.club/plantSeed', {
 });
 ```
 
+## fetch de Harvest:
+
+```js
+fetch("https://blockfarm.club/harvestPlant", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "cookie": "_ga=GA1.1.596638441.1634565849; remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6ImxJQkZtclU2ZWdienlQb216dk1KVEE9PSIsInZhbHVlIjoiMC9RMjBLYlhuWjhTMWFXK2NPL1dFN3pCNHdWSHI5TkZ5OEdpazRjTDk2TmoxK013bXBCbTFzb2M0dTVrQk8zU2JqM0xJNGJUQXppTURKaFBjLzNPK0p6U0VWbUlGK01LMi9nMEd6L3MyS2pZMHVXSWFGclNsVlZVdFFpOFhOL1VjVlNWT21Hb1lNMzA4T25jV3lac1pabndaUzAxQ2IrZi9Jb2hpelJ3My9xZTVNWWJXMXVMQ0o3bEhRNUVlVzJWSmpGZzZibjFUT0ttdFQrSm5xMGh6Zy9rM2NZZFVVMVYwWllleXhIRUFYaz0iLCJtYWMiOiJiZjVlNDJmMWNiNzc2NWQxNTY1MWUyODhmMTcyMzJlOTAyODNlMjNlYzI0NmRkYjhkOWMzMGE5NWU3NTMzYzg3IiwidGFnIjoiIn0%3D; __cf_bm=7kqELBnwaJrqanAOx465PknwB70xC1WlYM1PJqq9nNM-1634905996-0-AdEvY0Pqs0EAU1M2taiW2h/b+AWJEE1zWwrpvmblrvfrc6/Vn2U5d9QAJgxPzN+UQ28VM1m0bffjhPjWoOxMkikYnsjTZ1V7OIDWoGKyQJnoUh2IMSFX5VvYZgCd4ktxMA==; XSRF-TOKEN=eyJpdiI6IitOaStjNVFROUU3NDRERTE5N3E2VHc9PSIsInZhbHVlIjoiN2wrRXBlMlR0S3kwQnJ2b2R3SlJ5VWNEOVZLc3BiWitFVlFhbFFIWUY3VTZFZjFzZ2gyN2pKemhKdXJ1bENQek91Zy9qMHRnL3lDT3NJTXJjN0lOcU45KzArcjBpbGdOVUdUKzYyZEFxUitTWU5vdjFPM0RyaVpHQVVNZXluNmciLCJtYWMiOiIwOTY1YzJjMmY2MmEwZmRkZGQ2OGQ5NDU1MmNlMDY2NTc2MDc4MGExMTMxMGNiNjgyZDk2MTVkOTZiMWNkMTU1IiwidGFnIjoiIn0%3D; _ga_YDFYHE91Z7=GS1.1.1634905995.19.1.1634906082.0; block_farm_club_session=eyJpdiI6Im1taysrcnE3d1hFOTg2T0U4bzJESWc9PSIsInZhbHVlIjoiSUN0ZHhZUC81SUg4eVZ6Umc1UzBrQTlQZXdid2lJS0RZU09jalJhSGZvSjFVT3FXSmZzczZXQ2UxQ0ZGdVFjcndWYmp3MjZLWlpPMG44RFUyUDhYcDR6T0dkOTJZa05DSWgvTHNFU0Z6NU80bDBKQWRDay80Wjd2UmZqWWR0ajEiLCJtYWMiOiJiZmVmOWNiZDI1YWZjZWVjMTgyYTU2OTQyMWY4MzhlYmFiMWQ4YmMzMjRmMjE5YzFlNmI3ZDQzYmY3M2ZiOTIyIiwidGFnIjoiIn0%3D",
+    "Referer": "https://blockfarm.club/farm/game/414376",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "_token=eXFsluR10AHsdi39Ng5YsVEkMreGWmEUGzCpuAYM&plant=1881016+&land=414376",
+  "method": "POST"
+});
+```
+
 ## fetch de aguar outro terreno de sol:
 
 ```js

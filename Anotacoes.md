@@ -690,3 +690,56 @@ fetch(
     },
 ]
 ```
+
+## fetch de pegar reward da world tree (type = numero do reward)
+
+```js
+const reward = 1;
+fetch('https://backend-farm.plantvsundead.com/world-tree/claim-reward', {
+  headers: {
+    accept: 'application/json, text/plain, */*',
+    'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+    authorization:
+      'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0NzMyNDY5MDE4LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDczMjQ2OX0.MCpYXZ666--sv2xEq3FYl1H8g4Ohb3rAVUBNFRUUgHU',
+    'content-type': 'application/json;charset=UTF-8',
+    'sec-ch-ua':
+      '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+  },
+  referrer: 'https://marketplace.plantvsundead.com/',
+  referrerPolicy: 'strict-origin-when-cross-origin',
+  body: `{"type": ${reward}}`,
+  method: 'POST',
+  mode: 'cors',
+});
+```
+
+## fetch de give water na world tree
+
+```js
+fetch('https://backend-farm.plantvsundead.com/world-tree/give-waters', {
+  headers: {
+    accept: 'application/json, text/plain, */*',
+    'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+    authorization:
+      'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0NzMyNDY5MDE4LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDczMjQ2OX0.MCpYXZ666--sv2xEq3FYl1H8g4Ohb3rAVUBNFRUUgHU',
+    'content-type': 'application/json;charset=UTF-8',
+    'sec-ch-ua':
+      '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+  },
+  referrer: 'https://marketplace.plantvsundead.com/',
+  referrerPolicy: 'strict-origin-when-cross-origin',
+  body: '{"amount":20}',
+  method: 'POST',
+  mode: 'cors',
+});
+```
