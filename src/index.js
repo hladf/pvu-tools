@@ -1,4 +1,4 @@
-import { LOOP_TIME } from './config/constants.js';
+import { INTERVAL_BETWEEN_ACTIONS, LOOP_TIME } from './config/constants.js';
 import { runPlantsProfitReport, runFarmAutomation } from './helpers/index.js';
 // eslint-disable-next-line
 import colors from 'colors';
@@ -10,7 +10,10 @@ function runInLoop() {
     const today = new Date().toLocaleString();
     console.log(`Agora é: ${today}`.black.bgGreen);
     console.log('Configurações:'.blue.bold);
-    console.log(`{ LOOP_TIME: ${LOOP_TIME} minutos }`.blue.bold);
+    console.log(
+      `{ LOOP_TIME: ${LOOP_TIME} minutos, INTERVAL_BETWEEN_ACTIONS: ${INTERVAL_BETWEEN_ACTIONS} segundos }`
+        .blue.bold
+    );
     runFarmAutomation();
     loopId = setInterval(() => {
       console.log('.'.black);

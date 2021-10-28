@@ -66,9 +66,11 @@ export async function getFarmData() {
   ).then((res) => res.json());
 }
 
-export async function fetchLatestPlantsDataOnMarket(type = 1) {
+export async function fetchLatestPlantsDataOnMarket(type = 1, elements = '') {
   return fetch(
-    `https://backend-farm.plantvsundead.com/get-plants-filter-v2?offset=0&limit=500&sort=latest&type=${type}`,
+    `https://backend-farm.plantvsundead.com/get-plants-filter-v2?offset=0&limit=500&sort=latest&type=${type}${
+      elements ? '&elements=' + elements : ''
+    }`,
     {
       headers: {
         accept: 'application/json, text/plain, */*',

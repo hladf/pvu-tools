@@ -23,6 +23,8 @@ export const INTERVAL_BETWEEN_ACTIONS =
 export const LOOP_TIME = process.env.LOOP_TIME || 5;
 /** in HOURS */
 export const MAX_PLANT_HOURS = process.env.MAX_PLANT_HOURS || 0;
+export const PLANT_ELEMENTS_FILTER = process.env.PLANT_ELEMENTS_FILTER || '';
+export const PLANT_TYPE = process.env.PLANT_TYPE || 1;
 
 export const TOOLS_DICT = {
   SmallPot: { id: 1, name: 'Small Pot' },
