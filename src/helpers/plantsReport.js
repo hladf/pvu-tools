@@ -7,21 +7,32 @@ import {
   MAX_PLANT_HOURS,
   REAIS_PRICE,
   CONVERSION_LE_PVU,
-  PLANT_ELEMENTS_FILTER,PLANT_TYPE
+  PLANT_ELEMENTS_FILTER,
+  PLANT_TYPE,
 } from '../config/constants.js';
 import { fetchLatestPlantsDataOnMarket } from '../services/index.js';
 import { readFileData } from './fileSystem.js';
 import { writeDataToFile } from './index.js';
+import { generateWorkbook } from './xlsx.js';
 
 function formatDecimal(number = 0) {
   return Number(number.toFixed(2));
 }
 
-export function generatePlantsProfitReport(data) {
+/**
+ *
+ * @param {*} data
+ * @param {string} sortBy 'profit' | 'payback'
+ * @returns
+ */
+export function generatePlantsProfitReport(data, sortBy = 'profit') {
   if (!Array.isArray(data)) {
     console.log('Dados invalidos...\n\n'.bgRed, { data });
     return;
   }
+
+  const sortByPayback = sortBy === 'payback';
+  const sortByProfit = sortBy === 'profit';
 
   const upToMaxPvuPrice = (data || []).filter(
     (i) => i.startingPrice >= MIN_PRICE && i.startingPrice <= MAX_PRICE
@@ -45,39 +56,41 @@ export function generatePlantsProfitReport(data) {
       const ReaisPorDia = formatDecimal(DolaresPorDia * REAIS_PRICE);
 
       return {
-        url:
-          'https://marketplace.plantvsundead.com/farm#/plant/' +
-          String(id).substring(0, 10),
         pricePVU: startingPrice,
         precoEmDolares,
         precoEmReais,
         le,
         hours,
         daysToHarvest: hours / 24,
-        LePorHora: profitPerHours,
-        LePorDia: profitPerHours * 24,
+        LePorHora: formatDecimal(profitPerHours),
+        LePorDia: formatDecimal(profitPerHours * 24),
         DolaresPorDia,
         ReaisPorDia,
         paybackEmDias: formatDecimal(precoEmDolares / DolaresPorDia),
         plantType: type,
+        url: 'https://marketplace.plantvsundead.com/farm#/plant/' + String(id),
       };
     }
   );
 
-  const filtered = formatted
-    .filter(
-      (i) =>
-        i.LePorHora >= MIN_PROFIT &&
-        i.hours <= (MAX_PLANT_HOURS ? MAX_PLANT_HOURS : 999)
-    )
-    // .sort((a, b) => b.LePorHora - a.LePorHora);
-    .sort((a, b) => a.paybackEmDias - b.paybackEmDias);
+  let filtered = formatted.filter(
+    (i) =>
+      i.LePorHora >= MIN_PROFIT &&
+      i.hours <= (MAX_PLANT_HOURS ? MAX_PLANT_HOURS : 999)
+  );
+
+  if (sortByPayback) {
+    filtered = filtered.sort((a, b) => a.paybackEmDias - b.paybackEmDias);
+  } else if (sortByProfit) {
+    filtered = filtered.sort((a, b) => b.LePorHora - a.LePorHora);
+  }
 
   console.log({
     'Registros encontrados no range de min/max price': upToMaxPvuPrice.length,
     'Registros filtrados pelos outros parametros': filtered.length,
   });
   writeDataToFile(filtered, 'src/reports/RecentPlantsSelling.json');
+  generateWorkbook(filtered, 'src/reports/RecentPlantsSelling.xlsx');
 }
 
 export async function runPlantsProfitReport() {
@@ -114,7 +127,10 @@ export async function runPlantsProfitReport() {
         .bgGreen.black
     );
 
-    const response = await fetchLatestPlantsDataOnMarket(PLANT_TYPE || 1, PLANT_ELEMENTS_FILTER);
+    const response = await fetchLatestPlantsDataOnMarket(
+      PLANT_TYPE || 1,
+      PLANT_ELEMENTS_FILTER
+    );
     if (!Array.isArray(response.data)) {
       return console.error(`Os dados encontrados são inválidos\n`.bgRed.black, {
         response,
