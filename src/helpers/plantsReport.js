@@ -89,6 +89,13 @@ export function generatePlantsProfitReport(data, sortBy = 'profit') {
     'Registros encontrados no range de min/max price': upToMaxPvuPrice.length,
     'Registros filtrados pelos outros parametros': filtered.length,
   });
+  if (!filtered.length) {
+    return console.log(
+      '\n\n',
+      'Zero registros encontrados com o filtro selecionado!'.bgRed.black,
+      '\n\n'
+    );
+  }
   writeDataToFile(filtered, 'src/reports/RecentPlantsSelling.json');
   generateWorkbook(filtered, 'src/reports/RecentPlantsSelling.xlsx');
 }
