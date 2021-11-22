@@ -5,7 +5,7 @@
 
 ## fetch para HARVEST:
 
-````js
+```js
 fetch("https://backend-farm.plantvsundead.com/farms/61664b06deb3c1001206a35b/harvest", {
   "headers": {
     "accept": "application/json, text/plain, */*",
@@ -25,6 +25,58 @@ fetch("https://backend-farm.plantvsundead.com/farms/61664b06deb3c1001206a35b/har
   "method": "POST",
   "mode": "cors"
 })
+```
+
+## fetch de plantar NFT:
+```js
+let url = 'https://backend-farm.plantvsundead.com/farms';
+
+let options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json, text/plain, */*',
+    'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+    authority: 'backend-farm.plantvsundead.com',
+    authorization: 'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM3MzM0Njk3MTM3LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns',
+    'content-type': 'application/json;charset=UTF-8',
+    dnt: '1',
+    origin: 'https://marketplace.plantvsundead.com',
+    referer: 'https://marketplace.plantvsundead.com/',
+    'sec-ch-ua': '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36'
+  },
+  body: '{"landId":0,"plantId":"1121529769688"}'
+};
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+
+curl --request POST \
+  --url https://backend-farm.plantvsundead.com/farms \
+  --header 'accept: application/json, text/plain, */*' \
+  --header 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --header 'authority: backend-farm.plantvsundead.com' \
+  --header 'authorization: Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM3MzM0Njk3MTM3LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns' \
+  --header 'content-type: application/json;charset=UTF-8' \
+  --header 'dnt: 1' \
+  --header 'origin: https://marketplace.plantvsundead.com' \
+  --header 'referer: https://marketplace.plantvsundead.com/' \
+  --header 'sec-ch-ua: "Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"' \
+  --header 'sec-ch-ua-mobile: ?0' \
+  --header 'sec-ch-ua-platform: "Windows"' \
+  --header 'sec-fetch-dest: empty' \
+  --header 'sec-fetch-mode: cors' \
+  --header 'sec-fetch-site: same-site' \
+  --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36' \
+  --data '{
+	"landId": 0,
+	"plantId": "1121529769688"
+}'
 ```
 
 ## fetch de plantar Sapling:
@@ -48,7 +100,7 @@ fetch("https://backend-farm.plantvsundead.com/farms", {
   "method": "POST",
   "mode": "cors"
 });
-````
+```
 
 ## fetch de remover planta ja colhida:
 
