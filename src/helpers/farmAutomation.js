@@ -14,31 +14,40 @@ export async function waitSeconds(seconds) {
 
 function generateActionsList(farmData = []) {
   return farmData.reduce((accumulator, current) => {
-    const canBeHarvested = current.totalHarvest > 0;
+    const canBeHarvested =
+      current.totalHarvest > 0 || current.totalExtraHarvest > 0;
 
     if (canBeHarvested) {
       // Opção de harvest
-      console.log('Hora da colheita!');
-      accumulator.push({ id: current._id, action: ACTIONS_DICT.HarvestPlant });
+      console.log(
+        'Hora da colheita! totalHarvest/totalExtraHarvest ->',
+        current.totalHarvest,
+        current.totalExtraHarvest
+      );
+      accumulator.push({
+        id: current._id,
+        action: ACTIONS_DICT.HarvestPlant,
+        message: `Colhido: ${current.totalHarvest}/${current.rate?.le} totalExtraHarvest: ${current.totalExtraHarvest}`,
+      });
 
-      if (current.isTempPlant) {
-        // remove plant e se é temporaria, planta novamente
-        const actionPlantAgain =
-          current.plantType === 2
-            ? ACTIONS_DICT.PlantMamaTree
-            : ACTIONS_DICT.PlantSapling;
-        console.log('replantando ' + actionPlantAgain.name);
-        accumulator.push({ id: current._id, action: ACTIONS_DICT.RemovePlant });
-        accumulator.push({
-          id: current._id,
-          action: actionPlantAgain,
-        });
-        accumulator.push({
-          id: current._id,
-          action: ACTIONS_DICT.ApplySmallPot,
-        });
-        accumulator.push({ id: current._id, action: ACTIONS_DICT.ApplyWater });
-      }
+      // remove plant e se é temporaria, planta novamente
+      const actionPlantAgain = current.isTempPlant
+        ? current.plantType === 2
+          ? ACTIONS_DICT.PlantMamaTree
+          : ACTIONS_DICT.PlantSapling
+        : ACTIONS_DICT.PlantNFT;
+      console.log('replantando ' + actionPlantAgain.name);
+      // não precisa mais remover
+      // accumulator.push({ id: current._id, action: ACTIONS_DICT.RemovePlant });
+      accumulator.push({
+        id: current.isTempPlant ? current._id : current.plantId,
+        action: actionPlantAgain,
+      });
+      accumulator.push({
+        id: current._id,
+        action: ACTIONS_DICT.ApplySmallPot,
+      });
+      accumulator.push({ id: current._id, action: ACTIONS_DICT.ApplyWater });
     }
 
     if (
@@ -47,9 +56,7 @@ function generateActionsList(farmData = []) {
     ) {
       accumulator.push({
         id: current._id,
-        action: current.isTempPlant
-          ? ACTIONS_DICT.ApplySmallPot
-          : ACTIONS_DICT.ApplyBigPot,
+        action: ACTIONS_DICT.ApplySmallPot,
       });
     }
 
@@ -91,7 +98,9 @@ export async function runFarmAutomation() {
 
   for (const plant of plantActionsList) {
     try {
-      const message = `Aplicando acao "${plant.action.name}" na planta ${plant.id}`;
+      const message = `Aplicando acao "${plant.action.name}" na planta ${
+        plant.id
+      }. ${plant.message || ''}`;
       registerLog({ message, title: 'Farm Automation' });
       console.log(message.red.bold);
       plant.action.function && (await plant.action.function(plant.id));

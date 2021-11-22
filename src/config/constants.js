@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import {
   applyTool,
   harvestPlant,
-  plantSaplingOrMamaTree,
+  plantTree,
   removePlant,
 } from '../services/index.js';
 dotenv.config();
@@ -38,11 +38,15 @@ export const ACTIONS_DICT = {
   HarvestPlant: { name: 'Harvest Plant', function: harvestPlant },
   PlantSapling: {
     name: 'Plant Sapling',
-    function: () => plantSaplingOrMamaTree(1),
+    function: () => plantTree(1, true),
   },
   PlantMamaTree: {
     name: 'Plant Mama Tree',
-    function: () => plantSaplingOrMamaTree(2),
+    function: () => plantTree(2, true),
+  },
+  PlantNFT: {
+    name: 'Plant NFT Tree',
+    function: plantTree,
   },
   ApplySmallPot: {
     name: TOOLS_DICT.SmallPot.name,

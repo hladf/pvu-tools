@@ -75,8 +75,7 @@ export async function fetchLatestPlantsDataOnMarket(type = 1, elements = '') {
       headers: {
         accept: 'application/json, text/plain, */*',
         'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-        authorization:
-          'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0MTY5NDUzMjg4LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDE2OTQ1M30.Zq74jWUcebWVqh8WiHnw9jrhSUNRPxU3GtuxnTuo6A0',
+        authorization: `Bearer Token: ${TOKEN}`,
         'if-none-match': 'W/"143b-m9mC3mzOUz+S2GBLgT1Bmuee4zg"',
         'sec-ch-ua':
           '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
@@ -95,10 +94,9 @@ export async function fetchLatestPlantsDataOnMarket(type = 1, elements = '') {
   ).then((res) => res.json());
 }
 
-/** type = 1 || 2 */
-export async function plantSaplingOrMamaTree(type = 1) {
+export async function plantTree(plantId = 1, isTempPlant = false) {
   if (TEST_MODE) {
-    console.log(`plantSaplingOrMamaTree(${type})`.bgWhite.black);
+    console.log(`plantSaplingOrMamaTree(${plantId})`.bgWhite.black);
     return;
   }
   return fetch('https://backend-farm.plantvsundead.com/farms', {
@@ -117,7 +115,9 @@ export async function plantSaplingOrMamaTree(type = 1) {
     },
     referrer: 'https://marketplace.plantvsundead.com/',
     referrerPolicy: 'strict-origin-when-cross-origin',
-    body: `{"landId":0,"sunflowerId":${type}}`,
+    body: `{"landId":0,"${
+      isTempPlant ? 'sunflowerId' : 'plantId'
+    }":${plantId}}`,
     method: 'POST',
     mode: 'cors',
   }).then((res) => res.json());
