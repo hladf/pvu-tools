@@ -3,14 +3,39 @@
 - activeTools fica com array vazio antes de botar vaso de planta
 - toolId 1 = vaso pequeno
 
+## apply tool water novo:
+
+```js
+fetch("https://backend-farm.plantvsundead.com/farms/apply-tool", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer Token: .ZtrUvUSqgBA_Twgwo_Ls0LPxCBYv5LhJLtE08oWiUlA",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "Referer": "https://marketplace.plantvsundead.com/",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "{\"farmId\":\"61b1f5cd4bf6eb0021f8e3ee\", \"toolId\":\"3\"}",
+  "method": "POST"
+});
+```
+
 ## fetch para HARVEST:
 
 ```js
-fetch("https://backend-farm.plantvsundead.com/farms/61664b06deb3c1001206a35b/harvest", {
+fetch("https://backend-farm.plantvsundead.com/v2/farms/61664b06deb3c1001206a35b/harvest", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0MzUwMjQ5MjEwLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDM1MDI0OX0.bBCvNoxHkRN0Bskht0g8HjNHkqqK62e8lIRe9YD6wmM",
+    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..bBCvNoxHkRN0Bskht0g8HjNHkqqK62e8lIRe9YD6wmM",
     "content-type": "application/json;charset=UTF-8",
     "sec-ch-ua": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
@@ -29,7 +54,7 @@ fetch("https://backend-farm.plantvsundead.com/farms/61664b06deb3c1001206a35b/har
 
 ## fetch de plantar NFT:
 ```js
-let url = 'https://backend-farm.plantvsundead.com/farms';
+let url = 'https://backend-farm.plantvsundead.com/v2/farms';
 
 let options = {
   method: 'POST',
@@ -37,7 +62,7 @@ let options = {
     accept: 'application/json, text/plain, */*',
     'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
     authority: 'backend-farm.plantvsundead.com',
-    authorization: 'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM3MzM0Njk3MTM3LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns',
+    authorization: 'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzgk3MTM3LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns',
     'content-type': 'application/json;charset=UTF-8',
     dnt: '1',
     origin: 'https://marketplace.plantvsundead.com',
@@ -57,11 +82,11 @@ fetch(url, options)
   .then(json => console.log(json))
 
 curl --request POST \
-  --url https://backend-farm.plantvsundead.com/farms \
+  --url https://backend-farm.plantvsundead.com/v2/farms \
   --header 'accept: application/json, text/plain, */*' \
   --header 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
   --header 'authority: backend-farm.plantvsundead.com' \
-  --header 'authorization: Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM3MzM0Njk3MTM3LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns' \
+  --header 'authorization: Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNzMzNDY5N30.Lx_Ofz0At6pmfCsnpT1aLWe6zPpLPcjS_J71YQusNns' \
   --header 'content-type: application/json;charset=UTF-8' \
   --header 'dnt: 1' \
   --header 'origin: https://marketplace.plantvsundead.com' \
@@ -81,11 +106,11 @@ curl --request POST \
 
 ## fetch de plantar Sapling:
 ```js
-fetch("https://backend-farm.plantvsundead.com/farms", {
+fetch("https://backend-farm.plantvsundead.com/v2/farms", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0Mjk1NDE1ODIzLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDI5NTQxNX0.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk",
+    "authorization": "Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0jcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDI5NTQxNX0.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk",
     "content-type": "application/json;charset=UTF-8",
     "sec-ch-ua": "\"Chromium\";v=\"94\", \"Google Chrome\";v=\"94\", \";Not A Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?0",
@@ -106,13 +131,13 @@ fetch("https://backend-farm.plantvsundead.com/farms", {
 
 ```js
 fetch(
-  'https://backend-farm.plantvsundead.com/farms/6164dc148af8d80020e046de/deactivate',
+  'https://backend-farm.plantvsundead.com/v2/farms/6164dc148af8d80020e046de/deactivate',
   {
     headers: {
       accept: 'application/json, text/plain, */*',
       'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
       authorization:
-        'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0Mjk1NDE1ODIzLCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDI5NTQxNX0.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk',
+        'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhi.GH6D4lzBN9OOgEar86IdtUj0rndERaFII3YNHRwFysk',
       'content-type': 'application/json;charset=UTF-8',
       'sec-ch-ua':
         '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
@@ -741,57 +766,4 @@ fetch(
       "totalExtraHarvest": 0
     },
 ]
-```
-
-## fetch de pegar reward da world tree (type = numero do reward)
-
-```js
-const reward = 1;
-fetch('https://backend-farm.plantvsundead.com/world-tree/claim-reward', {
-  headers: {
-    accept: 'application/json, text/plain, */*',
-    'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-    authorization:
-      'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0NzMyNDY5MDE4LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDczMjQ2OX0.MCpYXZ666--sv2xEq3FYl1H8g4Ohb3rAVUBNFRUUgHU',
-    'content-type': 'application/json;charset=UTF-8',
-    'sec-ch-ua':
-      '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-site',
-  },
-  referrer: 'https://marketplace.plantvsundead.com/',
-  referrerPolicy: 'strict-origin-when-cross-origin',
-  body: `{"type": ${reward}}`,
-  method: 'POST',
-  mode: 'cors',
-});
-```
-
-## fetch de give water na world tree
-
-```js
-fetch('https://backend-farm.plantvsundead.com/world-tree/give-waters', {
-  headers: {
-    accept: 'application/json, text/plain, */*',
-    'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-    authorization:
-      'Bearer Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNBZGRyZXNzIjoiMHhiNTUzNzg0NjZmOTJlNzAyZWIzNTBhN2ViMmQ3N2ZmOWJhMTkwOWYzIiwibG9naW5UaW1lIjoxNjM0NzMyNDY5MDE4LCJjcmVhdGVEYXRlIjoiMjAyMS0xMC0wMSAyMjowNzozNyIsImlhdCI6MTYzNDczMjQ2OX0.MCpYXZ666--sv2xEq3FYl1H8g4Ohb3rAVUBNFRUUgHU',
-    'content-type': 'application/json;charset=UTF-8',
-    'sec-ch-ua':
-      '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-site',
-  },
-  referrer: 'https://marketplace.plantvsundead.com/',
-  referrerPolicy: 'strict-origin-when-cross-origin',
-  body: '{"amount":20}',
-  method: 'POST',
-  mode: 'cors',
-});
 ```

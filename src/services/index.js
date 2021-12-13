@@ -8,26 +8,26 @@ export async function applyTool(toolId, plantId) {
     return;
   }
   const url = 'https://backend-farm.plantvsundead.com/farms/apply-tool';
-  const body = `{"farmId":"${plantId}","toolId":${toolId},"token":{"challenge":"default","seccode":"default","validate":"default"}}`;
+  const body = `{"farmId":"${plantId}","toolId":${toolId}}`;
   const options = {
     method: 'POST',
     headers: {
       authority: 'backend-farm.plantvsundead.com',
-      'sec-ch-ua':
-        '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+      // 'sec-ch-ua':
+      //   '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
       dnt: '1',
-      'sec-ch-ua-mobile': '?0',
+      // 'sec-ch-ua-mobile': '?0',
       authorization: `Bearer Token: ${TOKEN}`,
       'content-type': 'application/json;charset=UTF-8',
       accept: 'application/json, text/plain, */*',
-      'user-agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36',
-      'sec-ch-ua-platform': '"Windows"',
-      origin: 'https://marketplace.plantvsundead.com',
-      'sec-fetch-site': 'same-site',
+      // 'user-agent':
+      //   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36',
+      // 'sec-ch-ua-platform': '"Windows"',
+      // origin: 'https://marketplace.plantvsundead.com',
+      // 'sec-fetch-site': 'same-site',
       'sec-fetch-mode': 'cors',
       'sec-fetch-dest': 'empty',
-      referer: 'https://marketplace.plantvsundead.com/',
+      // referer: 'https://marketplace.plantvsundead.com/',
       'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
     },
     body,
@@ -42,23 +42,23 @@ export async function getFarmData() {
     return { data: farmDataMock };
   }
   return fetch(
-    'https://backend-farm.plantvsundead.com/farms?limit=10&offset=0',
+    'https://backend-farm.plantvsundead.com/v2/farms?limit=10&offset=0',
     {
       headers: {
         accept: 'application/json, text/plain, */*',
         'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
         authorization: `Bearer Token: ${TOKEN}`,
         'if-none-match': 'W/"1e70-jFZ0xCTVPt66HxIu86Iv0MVqxNY"',
-        'sec-ch-ua':
-          '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
+        // 'sec-ch-ua':
+        //   '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+        // 'sec-ch-ua-mobile': '?0',
+        // 'sec-ch-ua-platform': '"Windows"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-site',
       },
-      referrer: 'https://marketplace.plantvsundead.com/',
-      referrerPolicy: 'strict-origin-when-cross-origin',
+      // referrer: 'https://marketplace.plantvsundead.com/',
+      // referrerPolicy: 'strict-origin-when-cross-origin',
       body: null,
       method: 'GET',
       mode: 'cors',
@@ -77,16 +77,16 @@ export async function fetchLatestPlantsDataOnMarket(type = 1, elements = '') {
         'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
         authorization: `Bearer Token: ${TOKEN}`,
         'if-none-match': 'W/"143b-m9mC3mzOUz+S2GBLgT1Bmuee4zg"',
-        'sec-ch-ua':
-          '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
+        // 'sec-ch-ua':
+        // '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+        // 'sec-ch-ua-mobile': '?0',
+        // 'sec-ch-ua-platform': '"Windows"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-site',
+        // 'sec-fetch-site': 'same-site',
       },
-      referrer: 'https://marketplace.plantvsundead.com/',
-      referrerPolicy: 'strict-origin-when-cross-origin',
+      // referrer: 'https://marketplace.plantvsundead.com/',
+      // referrerPolicy: 'strict-origin-when-cross-origin',
       body: null,
       method: 'GET',
       mode: 'cors',
@@ -99,21 +99,21 @@ export async function plantTree(plantId = 1, isTempPlant = false) {
     console.log(`plantSaplingOrMamaTree(${plantId})`.bgWhite.black);
     return;
   }
-  return fetch('https://backend-farm.plantvsundead.com/farms', {
+  return fetch('https://backend-farm.plantvsundead.com/v2/farms', {
     headers: {
       accept: 'application/json, text/plain, */*',
       'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
       authorization: `Bearer Token: ${TOKEN}`,
       'content-type': 'application/json;charset=UTF-8',
-      'sec-ch-ua':
-        '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-      'sec-ch-ua-mobile': '?0',
-      'sec-ch-ua-platform': '"Windows"',
+      // 'sec-ch-ua':
+      //   '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+      // 'sec-ch-ua-mobile': '?0',
+      // 'sec-ch-ua-platform': '"Windows"',
       'sec-fetch-dest': 'empty',
       'sec-fetch-mode': 'cors',
       'sec-fetch-site': 'same-site',
     },
-    referrer: 'https://marketplace.plantvsundead.com/',
+    // referrer: 'https://marketplace.plantvsundead.com/',
     referrerPolicy: 'strict-origin-when-cross-origin',
     body: `{"landId":0,"${
       isTempPlant ? 'sunflowerId' : 'plantId'
@@ -129,23 +129,23 @@ export async function removePlant(id) {
     return;
   }
   return fetch(
-    `https://backend-farm.plantvsundead.com/farms/${id}/deactivate`,
+    `https://backend-farm.plantvsundead.com/v2/farms/${id}/deactivate`,
     {
       headers: {
         accept: 'application/json, text/plain, */*',
         'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
         authorization: `Bearer Token: ${TOKEN}`,
         'content-type': 'application/json;charset=UTF-8',
-        'sec-ch-ua':
-          '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
+        // 'sec-ch-ua':
+        //   '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+        // 'sec-ch-ua-mobile': '?0',
+        // 'sec-ch-ua-platform': '"Windows"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-site',
       },
-      referrer: 'https://marketplace.plantvsundead.com/',
-      referrerPolicy: 'strict-origin-when-cross-origin',
+      // referrer: 'https://marketplace.plantvsundead.com/',
+      // referrerPolicy: 'strict-origin-when-cross-origin',
       body: '{}',
       method: 'POST',
       mode: 'cors',
@@ -158,22 +158,22 @@ export async function harvestPlant(id) {
     console.log(`harvestPlant(${id})`.bgWhite.black);
     return;
   }
-  return fetch(`https://backend-farm.plantvsundead.com/farms/${id}/harvest`, {
+  return fetch(`https://backend-farm.plantvsundead.com/v2/farms/${id}/harvest`, {
     headers: {
       accept: 'application/json, text/plain, */*',
       'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
       authorization: `Bearer Token: ${TOKEN}`,
       'content-type': 'application/json;charset=UTF-8',
-      'sec-ch-ua':
-        '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-      'sec-ch-ua-mobile': '?0',
-      'sec-ch-ua-platform': '"Windows"',
+      // 'sec-ch-ua':
+      //   '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
+      // 'sec-ch-ua-mobile': '?0',
+      // 'sec-ch-ua-platform': '"Windows"',
       'sec-fetch-dest': 'empty',
       'sec-fetch-mode': 'cors',
       'sec-fetch-site': 'same-site',
     },
-    referrer: 'https://marketplace.plantvsundead.com/',
-    referrerPolicy: 'strict-origin-when-cross-origin',
+    // referrer: 'https://marketplace.plantvsundead.com/',
+    // referrerPolicy: 'strict-origin-when-cross-origin',
     body: '{}',
     method: 'POST',
     mode: 'cors',
